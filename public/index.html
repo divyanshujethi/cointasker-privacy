@@ -4,101 +4,107 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cointasker - Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f5f7fa;
-      color: #333;
-    }
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background: #f5f7fa; color: #333; }
 
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #4B79FF, #283EAF);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 40px;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 36px; margin-bottom: 10px; }
+    header p { font-size: 18px; opacity: 0.9; }
+
+    /* Container */
     .container {
-      max-width: 850px;
-      margin: 40px auto;
+      max-width: 900px;
+      margin: -40px auto 50px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Card Style */
+    .card {
       background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      animation: fadeIn 0.3s ease-in-out;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 0.6s ease forwards;
     }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px rgba(0,0,0,0.12); }
+    .card h2 { font-size: 22px; color: #4B79FF; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .card p, .card ul { font-size: 16px; line-height: 1.7; }
 
-    h1 {
+    .card ul { padding-left: 20px; }
+
+    /* Icons */
+    .icon { font-size: 22px; color: #4B79FF; }
+
+    /* Footer */
+    footer {
       text-align: center;
-      font-size: 32px;
-      color: #222;
-      margin-bottom: 10px;
-    }
-
-    p, li {
-      font-size: 17px;
-      line-height: 1.7;
-    }
-
-    h2 {
-      font-size: 24px;
-      margin-top: 30px;
-      color: #444;
-      position: relative;
-      padding-left: 10px;
-    }
-
-    h2::before {
-      content: "";
-      width: 5px;
-      height: 22px;
-      background: #4B79FF;
-      position: absolute;
-      left: 0;
-      top: 6px;
-      border-radius: 2px;
-    }
-
-    ul {
-      margin-left: 20px;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 30px;
+      padding: 20px 10px;
       color: #777;
       font-size: 14px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Animations */
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media(max-width: 600px) {
+      header { border-radius: 0; padding: 40px 20px 30px; }
+      .container { margin: -20px auto 30px; padding: 15px; }
     }
   </style>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>Cointasker - Privacy Policy</h1>
-    <p><strong>Last Updated:</strong> 2025</p>
+<header>
+  <h1>Cointasker</h1>
+  <p>Privacy Policy & Data Protection</p>
+</header>
 
-    <p>Thank you for using <strong>Cointasker</strong>. This Privacy Policy explains how we collect, use, and safeguard your information inside our application.</p>
-
-    <h2>Information We Collect</h2>
+<div class="container">
+  <div class="card">
+    <h2><i class="fas fa-info-circle icon"></i> Information We Collect</h2>
     <ul>
       <li>Google Login details (Name, Email, Profile Photo)</li>
       <li>Device information (Android version, IP, OS)</li>
       <li>Task activity and reward history</li>
       <li>App usage analytics</li>
     </ul>
+  </div>
 
-    <h2>How We Use Your Information</h2>
-    <p>We use collected data to:</p>
+  <div class="card">
+    <h2><i class="fas fa-cogs icon"></i> How We Use Your Information</h2>
     <ul>
-      <li>Verify your identity and prevent fraudulent accounts</li>
+      <li>Verify identity and prevent fraudulent accounts</li>
       <li>Track coins, rewards, and task progress</li>
-      <li>Improve app performance and experience</li>
-      <li>Provide third-party offers and surveys</li>
+      <li>Improve app performance and user experience</li>
+      <li>Provide third-party offers, surveys, and promotions</li>
     </ul>
+  </div>
 
-    <h2>Third-Party Services We Use</h2>
-    <p>Cointasker integrates with trusted third-party platforms including:</p>
+  <div class="card">
+    <h2><i class="fas fa-handshake icon"></i> Third-Party Services</h2>
     <ul>
       <li>Firebase Authentication & Firestore</li>
       <li>Google AdMob</li>
@@ -106,27 +112,32 @@
       <li>BitLabs</li>
       <li>CPX Research</li>
     </ul>
-    <p>These partners may collect ad identifiers, device info, and usage data for offer tracking.</p>
-
-    <h2>Data Protection & Security</h2>
-    <p>We store your data securely in Firebase using encrypted industry-grade systems.  
-    We never sell or misuse your personal information.</p>
-
-    <h2>Your Rights</h2>
-    <ul>
-      <li>You can delete your account anytime</li>
-      <li>You can request full data removal</li>
-      <li>You can opt out of optional permissions</li>
-    </ul>
-
-    <h2>Contact Us</h2>
-    <p>If you have questions, contact us at:</p>
-    <p><strong>your-email@example.com</strong></p>
-
-    <div class="footer">
-      © 2025 Cointasker — All Rights Reserved
-    </div>
+    <p>These partners may collect device info and usage data for analytics and ad tracking.</p>
   </div>
+
+  <div class="card">
+    <h2><i class="fas fa-shield-alt icon"></i> Data Protection & Security</h2>
+    <p>We store your data securely in Firebase with industry-standard encryption. We never sell or misuse your personal information.</p>
+  </div>
+
+  <div class="card">
+    <h2><i class="fas fa-user-lock icon"></i> Your Rights</h2>
+    <ul>
+      <li>Delete your account anytime</li>
+      <li>Request full data removal</li>
+      <li>Opt out of optional permissions</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><i class="fas fa-envelope icon"></i> Contact Us</h2>
+    <p>If you have questions, contact us at: <strong>divyanshujethi@gmail.com</strong></p>
+  </div>
+</div>
+
+<footer>
+  © 2025 Cointasker — All Rights Reserved
+</footer>
 
 </body>
 </html>
